@@ -4,6 +4,7 @@ library;
 abstract final class AssetConstants {
   // ── Icons ──────────────────────────────────────────────────────────────
   static const String appIcon = 'assets/icons/app_icon.png';
+  static const String googleIcon = 'assets/icons/google_icon.png';
 
   // ── Onboarding illustrations ───────────────────────────────────────────
   static const String onboard1 = 'assets/icons/onboard1.png';

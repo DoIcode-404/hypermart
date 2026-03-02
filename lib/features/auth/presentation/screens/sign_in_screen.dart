@@ -275,7 +275,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                       return SizedBox(
                         width: double.infinity,
                         height: 56,
-                        child: OutlinedButton.icon(
+                        child: OutlinedButton(
                           onPressed:
                               isGoogleLoading
                                   ? null
@@ -286,60 +286,54 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                                                 .notifier,
                                           )
                                           .signIn(),
-                          icon:
-                              isGoogleLoading
-                                  ? const SizedBox(
-                                    width: 20,
-                                    height: 20,
-                                    child: CircularProgressIndicator(
-                                      strokeWidth: 2.5,
-                                      color: AppColors.primary,
-                                    ),
-                                  )
-                                  : const Text(
-                                    'G',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w700,
-                                      color: Color(0xFF4285F4),
-                                    ),
-                                  ),
-                          label: Text(
-                            'Continue with Google',
-                            style: AppTextStyles.bodyLarge.copyWith(
-                              color: AppColors.textPrimary,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
                           style: OutlinedButton.styleFrom(
                             side: BorderSide(color: AppColors.dotInactive),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16),
                             ),
                           ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              if (isGoogleLoading)
+                                const SizedBox(
+                                  width: 20,
+                                  height: 20,
+                                  child: CircularProgressIndicator(
+                                    strokeWidth: 2.5,
+                                    color: AppColors.primary,
+                                  ),
+                                )
+                              else
+                                Image.asset(
+                                  AssetConstants.googleIcon,
+                                  width: 22,
+                                  height: 22,
+                                  errorBuilder:
+                                      (_, __, ___) => const Text(
+                                        'G',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w700,
+                                          color: Color(0xFF4285F4),
+                                        ),
+                                      ),
+                                ),
+                              const SizedBox(width: 12),
+                              Text(
+                                'Continue with Google',
+                                style: AppTextStyles.bodyLarge.copyWith(
+                                  color: AppColors.textPrimary,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       );
                     },
                   ),
-                  const SizedBox(height: 24),
-
-                  // ── Create account link ──────────────────────────
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Don't have an account? ",
-                        style: AppTextStyles.bodyMedium,
-                      ),
-                      GestureDetector(
-                        onTap: () => context.pushNamed(RouteNames.signUp),
-                        child: Text(
-                          'Create account',
-                          style: AppTextStyles.link,
-                        ),
-                      ),
-                    ],
-                  ),
+                  const SizedBox(height: 8),
                 ],
               ),
             ),
