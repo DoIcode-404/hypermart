@@ -1,0 +1,1 @@
+/// UserMapper — converts UserModel ↔ UserEntity.
