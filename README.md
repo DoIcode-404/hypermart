@@ -49,7 +49,7 @@ A Flutter e-commerce application built with Clean Architecture, Riverpod state m
   </tr>
 </table>
 
-> 📸 Screenshots taken on a Pixel 7 (Android 14) emulator.
+> 📸 Screenshots taken on device preview - Model: iPhone 13.
 
 ---
 
