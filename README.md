@@ -4,6 +4,55 @@ A Flutter e-commerce application built with Clean Architecture, Riverpod state m
 
 ---
 
+## App Design
+
+<table>
+  <tr>
+    <td align="center"><b>Onboarding</b></td>
+    <td align="center"><b>Sign In</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/onboarding.png" width="200"/></td>
+    <td><img src="screenshots/sign_in.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Home / Products</b></td>
+    <td align="center"><b>Product Details</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/product_list.png" width="200"/></td>
+    <td><img src="screenshots/product_details.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Cart</b></td>
+    <td align="center"><b>Wishlist</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/cart.png" width="200"/></td>
+    <td><img src="screenshots/wishlist.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Checkout</b></td>
+    <td align="center"><b>Orders</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/checkout.png" width="200"/></td>
+    <td><img src="screenshots/orders.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Order Tracking</b></td>
+    <td align="center"><b>Profile</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/order_tracking.png" width="200"/></td>
+    <td><img src="screenshots/profile.png" width="200"/></td>
+  </tr>
+</table>
+
+> 📸 Screenshots taken on a Pixel 7 (Android 14) emulator.
+
+---
+
 ## Table of Contents
 
 1. [Setup Instructions](#setup-instructions)
