@@ -50,3 +50,14 @@ app.*.map.json
 /android/app/upload-keystore.jks
 *.jks
 *.keystore
+
+# Firebase — contain real API keys; regenerate with `flutterfire configure`
+/android/app/google-services.json
+/ios/Runner/GoogleService-Info.plist
+/lib/firebase_options.dart
+
+# Environment / secrets
+.env
+.env.*
+*.secret
+secrets.dart
